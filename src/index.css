@@ -4,12 +4,10 @@
 
 :root {
   font-family: "Noto Sans", sans-serif;
-  background-color: rgb(68, 7, 65);
+  background-color: rgb(38, 3, 36);
   color: white;
 }
 
 .bg-image {
-  background-image: url('/assets/noise.webp'); /* Make sure path is correct */
-  background-size: cover; /* Ensure it covers the entire element */
-  background-position: center; /* Centers the image */
+  background-image: url('src/assets/noise.webp'); /* Make sure path is correct */
 }
