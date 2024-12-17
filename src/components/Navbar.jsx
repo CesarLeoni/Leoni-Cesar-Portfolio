@@ -35,31 +35,104 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // GSAP animation for the Desktop Menu links
+  //GSAP animation for the desktop menu links - letter by letter
   useEffect(() => {
-    // Ensure that the elements exist
-    const links = document.querySelectorAll('.nav-link');
-    if (links.length > 0) {
-      gsap.from(links, {
-        y: 50,                   // Animate vertical movement
-        duration: 1,              // Duration of animation
-        stagger: 0.2,             // Stagger effect
-        ease: 'power2.out',       // Easing for smooth effect
-        scale: 1.1,               // Slight scale-up for entrance
+    const navbar = navRef.current;
+  
+    if (navbar) {
+      const nameElement = navbar.querySelector('.nav-name span');
+      const links = navbar.querySelectorAll('.nav-link');
+  
+      // Animate the entire navbar container
+      gsap.fromTo(
+        navbar,
+        { opacity: 0, y: -50 }, // Start above the viewport
+        { opacity: 1, y: 0, duration: 1, ease: 'power2.out' } // Slide down to final position
+      );
+  
+      // Split name into individual letters
+      const nameText = nameElement.textContent
+        .split('')
+        .map((char) => `<span class="char">${char}</span>`)
+        .join('');
+      nameElement.innerHTML = nameText;
+  
+      // Split links into individual letters
+      links.forEach((link) => {
+        const linkText = link.textContent
+          .split('')
+          .map((char) => `<span class="char">${char}</span>`)
+          .join('');
+        link.innerHTML = linkText;
       });
+  
+      // Animate all characters (name + links) in sequence with y-axis motion
+      const chars = navbar.querySelectorAll('.char');
+      gsap.fromTo(
+        chars,
+        { opacity: 0, y: -100 }, // Start slightly above
+        {
+          opacity: 1,
+          y: 0, // Final position
+          duration: 1.5,
+          stagger: 0.02, // Uniform left-to-right effect
+          ease: 'power2.out',
+          delay: 0.3, // Wait for the navbar animation to finish
+        }
+      );
     }
-  }, []); // Runs once after component mounts
+  }, []);
+  
+  
+  // GSAP animation for the Desktop Menu links
+//   useEffect(() => {
+//     const navbar = navRef.current;
+  
+//     if (navbar) {
+//       const links = navbar.querySelectorAll('.nav-link');
+//       const nameElement = navbar.querySelector('.nav-name');
+  
+//       // Animate the entire navbar container
+//       gsap.fromTo(
+//         navbar,
+//         { opacity: 0, y: -50 }, // Start position
+//         { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }
+//       );
+  
+ 
+//       // Animate the links with stagger
+//       if (links.length > 0) {
+//         gsap.fromTo(
+//           links,
+//           { opacity: 0, y: 30 },
+//           {
+//             opacity: 1,
+//             y: 0,
+//             duration: 1,
+//             stagger: 0.15,
+//             ease: 'power2.out',
+//             delay: 0.4, // Links start animating after navbar and name
+//           }
+//         );
+//       }
+//     }
+//   }, []);
+  
 
   // GSAP animation for Mobile Menu links when it opens
   useEffect(() => {
     if (isMobileMenuOpen) {
-      gsap.from('.mobile-nav-link', {
-        x: -30,                  // Animate horizontal movement for mobile menu
-        duration: 0.5,           // Duration of animation
-        stagger: 0.05,            // Stagger effect
-        ease: 'power2.out',      // Easing for smooth effect
-        scale: 1.1,              // Slight scale-up for entrance
-      });
+      gsap.fromTo(
+        '.mobile-nav-link',
+        { opacity: 0, x: -50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.5,
+          stagger: 0.1,
+          ease: 'power2.out',
+        }
+      );
     }
   }, [isMobileMenuOpen]);
 
@@ -73,7 +146,7 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between gap-6">
             <div>
-              <a href="/" className="nav-link">
+              <a href="/" className="nav-link nav-name">
                 <span className="uppercase hover:text-stone-300">Leoni Cesar</span>
               </a>
             </div>
