@@ -5,9 +5,32 @@
 :root {
   font-family: "Noto Sans", sans-serif;
   background-color: rgb(38, 3, 36);
-  color: white;
+  color: white; /* Global text color */
 }
 
+/* Ensure text color is white */
+.nav-link, .mobile-nav-link {
+  color: white; /* Force white text color */
+  transition: color 0.3s ease; /* Smooth transition for color changes */
+}
+
+/* Remove any backdrop interference with the navbar */
+.navbar-background {
+  z-index: 10; /* Ensure navbar is in front */
+}
+
+/* Background image styles */
 .bg-image {
-  background-image: url('src/assets/noise.webp'); /* Make sure path is correct */
+  background-image: url('/assets/noise.webp');
+  position: fixed;
+  inset: 0; /* Cover the entire viewport */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Keep the background image behind other content */
+}
+
+/* Ensure the body's background is applied correctly */
+html, body {
+  background-color: rgb(38, 3, 36);
+  color: white;
 }
