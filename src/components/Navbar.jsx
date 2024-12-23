@@ -120,6 +120,7 @@ const Navbar = () => {
   
 
   // GSAP animation for Mobile Menu links when it opens
+  // GSAP animation for Mobile Menu links when it opens
   useEffect(() => {
     if (isMobileMenuOpen) {
       gsap.fromTo(
@@ -133,8 +134,23 @@ const Navbar = () => {
           ease: 'power2.out',
         }
       );
+    } else {
+      // GSAP animation for closing the mobile menu smoothly
+      gsap.to('.mobile-nav-link', {
+        opacity: 1,
+        x: -50,
+        duration: 1,
+        stagger: 0.1,
+        ease: 'power2.out',
+        onComplete: () => {
+          // After the animation completes, hide the menu
+          const menu = mobileMenuRef.current;
+          if (menu) menu.style.display = 'none'; // Hide menu after animation
+        },
+      });
     }
   }, [isMobileMenuOpen]);
+
 
   return (
     <div>
@@ -170,7 +186,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className="py-2 backdrop-blur-md lg:hidden">
+        <div className="py-2 backdrop-blur-md border-b-2 g:hidden">
           <div className="flex items-center justify-between">
             <div>
               <a href="#">
