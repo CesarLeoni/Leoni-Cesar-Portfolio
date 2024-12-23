@@ -138,7 +138,8 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="fixed left-0 right-0 z-50 lg:top-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
+
         {/* Desktop Menu */}
         <div
           ref={navRef}

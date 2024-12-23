@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
 const App = () => {
   return (
@@ -7,6 +8,7 @@ const App = () => {
        bg-cover bg-center"></div>
         <div className="relative z-10">
           <Navbar/>
+          <Hero />
        </div>
     </main>
 

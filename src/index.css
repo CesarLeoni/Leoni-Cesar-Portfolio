@@ -16,7 +16,7 @@
 
 /* Remove any backdrop interference with the navbar */
 .navbar-background {
-  z-index: 10; /* Ensure navbar is in front */
+  z-index: 50; /* Ensure navbar is in front */
 }
 
 /* Background image styles */
@@ -26,11 +26,16 @@
   inset: 0; /* Cover the entire viewport */
   background-size: cover;
   background-position: center;
-  z-index: -1; /* Keep the background image behind other content */
+  z-index: -10; /* Keep the background image behind other content */
 }
 
 /* Ensure the body's background is applied correctly */
 html, body {
   background-color: rgb(38, 3, 36);
   color: white;
+}
+
+.hero-title,
+.hero-subheading {
+  z-index: 10; /* Ensure it doesn't render under the Navbar */
 }

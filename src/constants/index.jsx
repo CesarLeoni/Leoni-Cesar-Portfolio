@@ -1,10 +1,10 @@
-import project1 from "../assets/project1.webp";
-import project2 from "../assets/project2.webp";
-import project3 from "../assets/project3.webp";
-import project4 from "../assets/project4.webp";
-import project5 from "../assets/project5.webp";
-import project6 from "../assets/project6.webp";
-import personImage from "../assets/testimonial.webp";
+import project1 from "/assets/project1.webp";
+import project2 from "/assets/project2.webp";
+import project3 from "/assets/project3.webp";
+import project4 from "/assets/project4.webp";
+import project5 from "/assets/project5.webp";
+import project6 from "/assets/project6.webp";
+import personImage from "/assets/testimonial.webp";
 
 import {
   RiHtml5Line,
@@ -28,10 +28,10 @@ export const NAVIGATION_LINKS = [
 ];
 
 export const PROFILE = {
-  name: "David Stones",
-  role: "Full Stack Developer",
+  name: "Leoni Cesar",
+  role: "AI Developer",
   subheading:
-    "With 10 years of full-stack development experience, I build efficient, scalable web applications. Not on the job hunt, but always curious about interesting projects.",
+    "Curious, open minded and ready to tackle any challenge. Especially if it impacts the world and it's cutting edge technology",
 };
 
 export const PROJECTS = [
