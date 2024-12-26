@@ -1,6 +1,6 @@
 # My personal Portofolio Website
 
-## Hosted [HERE](https://personal-site.app.genez.io/) by [@Genezio](https://github.com/Genez-io)
+## Hosted [HERE](https://leoni-cesar-portfolio.netlify.app/) by Netlify
 
 ## React framework and Vite. Uses Tailwind Css and GSAP for animations.
 
