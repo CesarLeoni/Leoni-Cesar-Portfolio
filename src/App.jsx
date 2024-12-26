@@ -1,5 +1,10 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Projects from './components/Projects';
+import Pending from './components/Pending';
+import LinkedInPosts from './components/LinkedInPosts';
+import Skills from "./components/Skills";
+import Experience from './components/Experience';
 
 const App = () => {
   return (
@@ -9,6 +14,11 @@ const App = () => {
         <div className="relative z-10">
           <Navbar/>
           <Hero />
+          <Projects />
+          <Skills />
+          <Experience/>
+          <LinkedInPosts />
+          <Pending />
        </div>
     </main>
 

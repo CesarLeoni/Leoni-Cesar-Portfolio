@@ -1,19 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { RiMenu3Line, RiCloseLine } from '@remixicon/react';
 import { gsap } from 'gsap';
+import { NAVIGATION_LINKS } from '../constants';
 
-// Navigation Links
-const NAVIGATION_LINKS = [
-  { label: 'Projects', href: '#projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Work Experience', href: '#work' },
-  { label: 'Education', href: '#education' },
-  { label: 'Contact', href: '#contact' },
-];
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -157,40 +152,41 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-md">
 
         {/* Desktop Menu */}
-        <div
-          ref={navRef}
-          className="mx-auto hidden max-w-xl items-center justify-center rounded-full border border-white py-2 backdrop-blur-sm lg:flex"
-        >
-          <div className="flex items-center justify-between gap-6">
-            <div>
-              <a href="/" className="nav-link nav-name">
-                <span className="uppercase hover:text-stone-300">Leoni Cesar</span>
-              </a>
-            </div>
-            <div>
-              <ul className="flex items-center gap-4">
-                {NAVIGATION_LINKS.map((item, index) => (
-                  <li key={index}>
-                    <a
-                      className="nav-link text-sm text-white hover:text-stone-300"
-                      href={item.href}
-                      onClick={(e) => handleLinkClick(e, item.href)}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+<div
+  ref={navRef}
+  className="mx-auto hidden max-w-4xl items-center justify-center rounded-full border border-white py-4 px-8 backdrop-blur-sm lg:flex"
+>
+  <div className="flex w-full items-center justify-between gap-12">
+    <div>
+      <a href="/" className="nav-link nav-name">
+        <span className="uppercase text-lg font-bold hover:text-stone-300">Leoni Cesar</span>
+      </a>
+    </div>
+    <div>
+      <ul className="flex items-center gap-8">
+        {NAVIGATION_LINKS.map((item, index) => (
+          <li key={index}>
+            <a
+              className="nav-link text-base font-medium text-white hover:text-stone-300"
+              href={item.href}
+              onClick={(e) => handleLinkClick(e, item.href)}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</div>
+
 
         {/* Mobile Menu */}
-        <div className="py-2 backdrop-blur-md border-b-2 g:hidden">
+        <div className="py-2 backdrop-blur-md border-b lg:hidden">
           <div className="flex items-center justify-between">
             <div>
               <a href="#">
-                <span className="pl-2 uppercase">Leoni Cesar</span>
+                <span className="pl-2 text-2xl">Leoni Cesar</span>
               </a>
             </div>
             <div className="flex items-center">
@@ -200,9 +196,9 @@ const Navbar = () => {
                 aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
               >
                 {isMobileMenuOpen ? (
-                  <RiCloseLine className="m-2 h-6 w-5" />
+                  <RiCloseLine className="m-2 h-8 w-8" />
                 ) : (
-                  <RiMenu3Line className="m-2 h-6 w-5" />
+                  <RiMenu3Line className="m-2 h-8 w-8" />
                 )}
               </button>
             </div>
