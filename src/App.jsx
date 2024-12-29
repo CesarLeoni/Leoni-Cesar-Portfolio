@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
@@ -12,6 +13,13 @@ import SnowEffect from "./components/SnowEffect";
 import SantaSleigh from "./components/SantaSleigh";
 
 const App = () => {
+  const [showSnowflakes, setShowSnowflakes] = useState(true); // Initially show snowflakes
+
+  // Function to toggle the visibility of snowflakes
+  const toggleSnowflakes = () => {
+    setShowSnowflakes(!showSnowflakes);
+  };
+
   return (
     <main className="mx-auto max-w-7xl overflow-x-hidden antialiased">
       <div
@@ -19,13 +27,15 @@ const App = () => {
        bg-cover bg-center"
       ></div>
       <div className="relative z-10">
-        <Navbar />
-        <SnowEffect />
+        <Navbar toggleSnowflakes={toggleSnowflakes} showSnowflakes={showSnowflakes} />
+        
+        {/* Conditionally render the SnowEffect based on the state */}
+        {showSnowflakes && <SnowEffect />}
+        
         {/* <SantaSleigh /> */}
         <Hero />
         <Projects />
         <Skills />
-        
         <Experience />
         <Education />
         <Contact />
