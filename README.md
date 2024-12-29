@@ -1,7 +1,9 @@
-# My personal Portofolio Website
+# My Personal Portfolio Website
 
-## Hosted [HERE](https://leoni-cesar-portfolio.netlify.app/) by Netlify
+## Built with React framework and Vite. Uses Tailwind CSS and GSAP for animations.
 
-## React framework and Vite. Uses Tailwind Css and GSAP for animations.
+## Enjoy 😄
 
-## Enjoy :smile:
+## Hosted <span style="color: purple;">[HERE](https://leoni-cesar-portfolio.app.genez.io/) by Genezio</span>
+
+## And <span style="color: green;">[HERE](https://leoni-cesar-portfolio.netlify.app/) by Netlify</span>
