@@ -108,7 +108,7 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
         <div className="flex w-full items-center justify-between gap-12">
           <div>
             <a href="/" className="nav-link nav-name">
-              <span className="uppercase text-lg font-bold hover:text-stone-300">Leoni Cesar</span>
+              <span className="uppercase text-lg hover:text-stone-300">Leoni Cesar</span>
             </a>
           </div>
           <div>
