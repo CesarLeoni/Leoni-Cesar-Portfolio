@@ -5,6 +5,8 @@ import Pending from './components/Pending';
 import LinkedInPosts from './components/LinkedInPosts';
 import Skills from "./components/Skills";
 import Experience from './components/Experience';
+import Education from './components/Education';
+import Contact from './components/Contact';
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
           <Projects />
           <Skills />
           <Experience/>
+          <Education/>
+          <Contact/>
           <LinkedInPosts />
           <Pending />
        </div>

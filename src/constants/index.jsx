@@ -227,27 +227,39 @@ export const EXPERIENCES = [
 export const EDUCATION = [
   {
     id: 1,
-    degree: "Bachelor of Science in Computer Science",
-    institution: "Stanford University",
-    duration: "2012 - 2016",
+    degree: "Bachelor's in Applied Electronics",
+    institution: "National University of Science and Technology POLITEHNICA Bucharest - ETTI Faculty",
+    duration: "2021 - 2025",
+    link: "https://etti.upb.ro/",
     description:
-      "Graduated with honors in Computer Science, focusing on algorithms, data structures, and web development. Completed a capstone project on scalable cloud architectures.",
+      "Includes courses such as: Object Oriented Programming, Internet Porgramming Technologies and Neural Netwoks and Fuzzy Logic. Average mark: 9.45",
   },
   {
     id: 2,
-    degree: "Master of Science in Software Engineering",
-    institution: "MIT",
-    duration: "2016 - 2018",
+    degree: "Generative AI Certified Professional",
+    institution: "Oracle Cloud Infrastructure",
+    duration: "2024",
+    link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=B8DDA8265682812BD27815516C8DE816497690BA532EA9070E626D321D5F7605",
     description:
-      "Focused on advanced software engineering concepts, system design, and AI technologies. Completed a thesis on machine learning applications in real-time data processing.",
+      "Skills: Artificial Intelligence (AI) · Large Language Models (LLM) · Retrieval Augmented Generation (RAG) · Oracle Cloud Infrastructure · Generative AI · Natural Language Processing (NLP)",
   },
   {
     id: 3,
-    degree: "Certified React Developer",
-    institution: "Udacity Nanodegree",
-    duration: "2019",
+    degree: "Java Development",
+    institution: "Digital Stack - Google",
+    duration: "2023",
+    link: "https://learn.digitalstack.ro/mod/linkedincert/verify_certificate.php?code=NsriNuyLmS",
     description:
       "Earned a certification in advanced React.js development, including hooks, context API, and performance optimization.",
+  },
+  {
+    id: 4,
+    degree: "Baccalaureate",
+    institution: "National College 'Frații Buzești' ",
+    duration: "2017 - 2021",
+    link: "https://www.cnfb.ro/",
+    description:
+      "Graduated Highschool with Mathematics Informatics Bilingual German. Average mark: 9.975. Baccalaureate marks: Maths - 9.65, Physics - 10, Romanian: 9.35",
   },
 ];
 

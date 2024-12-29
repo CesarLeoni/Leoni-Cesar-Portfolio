@@ -21,7 +21,7 @@ const Projects = () =>{
                                     <h3 className="mb-2 text-lg font-medium lg:text-2xl">{project.title}</h3>
                                     <p className="mg-4">{project.description}</p>
                                     <div className="pt-2">
-                                            <span class="font-bold mb-2 block">
+                                            <span className="font-bold mb-2 block">
                                                 {project.skills}
                                             </span>
                                         <ul>
