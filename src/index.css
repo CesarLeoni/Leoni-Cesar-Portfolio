@@ -29,12 +29,105 @@
   z-index: 1; /* Keep the background image behind other content */
 }
 
-/* Ensure the body's background is applied correctly */
+/* Apply styles to the entire document */
 html, body {
   background-color: rgb(38, 3, 36);
   color: white;
+  scrollbar-width: thin;  /* Firefox: sets scrollbar width */
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
+/* Webkit-based browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 14px;  /* Set width for vertical scrollbar */
+  height: 14px; /* Set height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;  /* Make the track background invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4c0066;  /* Darker purple thumb color for better contrast */
+  border-radius: 20px;  /* More rounded thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38004f;  /* Darker purple thumb on hover */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #2e0039;  /* Even darker purple when the thumb is pressed */
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent; /* Ensure no additional background or arrows */
+}
+
+/* Optional: Add a custom scrollbar style for horizontal scrolling */
+::-webkit-scrollbar-horizontal {
+  height: 14px;
+}
+
+::-webkit-scrollbar-track-horizontal {
+  background: transparent; /* Make the track background invisible */
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+  background: #4c0066;
+  border-radius: 20px;  /* Rounded thumb for horizontal */
+}
+
+/* Media Queries for Dark Mode */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Track color in dark mode */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4c0066; /* Darker purple thumb in dark mode */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #38004f; /* Darker thumb on hover in dark mode */
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #2e0039; /* Even darker purple when pressed in dark mode */
+  }
+
+  /* Firefox dark mode */
+  html, body {
+    scrollbar-color: #4c0066 transparent;  /* Thumb and transparent track in dark mode */
+  }
+}
+
+/* Media Queries for Light Mode */
+@media (prefers-color-scheme: light) {
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Track color in light mode */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #660066; /* Dark purple thumb for light mode */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #520052; /* Darker purple thumb on hover */
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: #3e003e; /* Even darker purple when pressed */
+  }
+
+  /* Firefox light mode */
+  html, body {
+    scrollbar-color: #660066 transparent;  /* Thumb and transparent track in light mode */
+  }
+}
+
+/* Optional: Additional styles for other elements */
 .hero-title,
 .hero-subheading {
   z-index: 10; /* Ensure it doesn't render under the Navbar */
@@ -89,5 +182,3 @@ html, body {
   pointer-events: none;
   z-index: 9999;
 }
-
-
