@@ -24,6 +24,17 @@ import {
   RiGitBranchLine,
 } from "@remixicon/react";
 
+
+export const NAVIGATION_LINKS = [
+  { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
+  { label: "Work Experience", href: "#work" },
+  { label: "Education", href: "#education" },
+  { label: "Contact", href: "#contact" },
+  { label: "LinkedIn Posts", href: "#linkedin" }, // New section
+];
+
+
 // Manually provide an array of post links (this could be in your index.jsx)
 export const LINKEDIN_POSTS = [
 
@@ -55,14 +66,7 @@ export const LINKEDIN_POSTS = [
 }
 ];
 
-export const NAVIGATION_LINKS = [
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Work Experience", href: "#work" },
-  { label: "Education", href: "#education" },
-  { label: "LinkedIn Posts", href: "#linkedin" }, // New section
-  { label: "Contact", href: "#contact" },
-];
+
 
 
 export const PROFILE = {

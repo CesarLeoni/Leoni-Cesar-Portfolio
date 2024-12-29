@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import Credits from './components/Credits';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Contact/>
           <LinkedInPosts />
           <Pending />
+          <Credits/>
        </div>
     </main>
 

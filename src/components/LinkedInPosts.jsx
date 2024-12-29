@@ -6,7 +6,7 @@ import {useRef} from "react"
 const LinkedInPosts = () => {
   const linkedinref = useRef(null)
   return (
-    <section className="py-16" id="linkedin" ref={linkedinref}>
+    <section className="py-8" id="linkedin" ref={linkedinref}>
             <div className="px-4">
       <h2 className="mb-8 text-center text-3xl font-medium lg:text-4xl">My Linked<AiOutlineLinkedin className="text-white inline"/> Posts</h2>
       {/* Container for the scrollable posts */}
