@@ -66,14 +66,21 @@ export const LINKEDIN_POSTS = [
 }
 ];
 
+const birthDate = new Date('2002-10-29'); // Replace with your actual birthdate (YYYY-MM-DD)
+const today = new Date();
 
+let age = today.getFullYear() - birthDate.getFullYear();
+const monthDifference = today.getMonth() - birthDate.getMonth();
+const dayDifference = today.getDate() - birthDate.getDate();
 
+if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+  age--; // If the birthday hasn't occurred yet this year
+}
 
 export const PROFILE = {
   name: "Leoni Cesar",
   role: "AI Developer",
-  subheading:
-    "Curious, open minded and ready to tackle any challenge. Especially if it impacts the world and it's cutting edge technology",
+  subheading: `Striving for growth and innovation over the past ${age} years, I’m driven by curiosity, eager to tackle challenges in cutting-edge technology with meaningful impact.`,
 };
 
 export const PROJECTS = [
