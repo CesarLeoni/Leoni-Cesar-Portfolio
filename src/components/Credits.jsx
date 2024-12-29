@@ -5,7 +5,7 @@ const Credits = () => {
     <div className="flex flex-col justify-center items-center space-y-4 text-center text-xl lg:text-2xl">
       <div className="flex items-start">
       <RiCopyrightLine className="mt-1 lg:mr-1 mr-0" />        <span>
-          This site was inspired by a{" "}
+          Inspired by a{" "}
           <a
             href="https://youtu.be/iGMbuSxw2sc?si=dVvlaxHmx2g4rqLQ"
             target="_blank"
