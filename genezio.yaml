@@ -3,10 +3,11 @@ frontend:
     publish: dist
     scripts:
         build:
+            - npm install
             - npm run build
         deploy:
             - npm install
-    subdomain: Leoni-Cesar-Portfolio
-name: Leoni-Cesar-Portfolio
+    subdomain: leoni-cesar-portfolio
+name: leoni-cesar-portfolio
 region: eu-central-1
 yamlVersion: 2
