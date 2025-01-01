@@ -11,7 +11,7 @@ const Experience = () => {
                 </h2>
                 <div className="flex flex-col space-y-12">
                     {EXPERIENCES.map((exp,index) => (
-                        <div key={index} className="flex flex-col ites-start justify-between md:flex-row">
+                        <div key={index} className="flex flex-col items-start justify-between md:flex-row rounded-xl border border-purple-300/20 p-4">
                             <div className="w-full text-sm font-semibold text-stone-300 md:w-1/4 lg:text-lg">
                                 {exp.yearRange}
                             </div>

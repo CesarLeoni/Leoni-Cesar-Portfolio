@@ -6,6 +6,7 @@ import project5 from "/assets/project5.webp";
 import project6 from "/assets/project6.webp";
 import personImage from "/assets/testimonial.webp";
 
+import linkedin5 from "/assets/linkedin5.webp";
 import linkedin4 from "/assets/linkedin4.webp";
 import linkedin3 from "/assets/linkedin3.webp";
 import linkedin2 from "/assets/linkedin2.webp";
@@ -38,6 +39,13 @@ export const NAVIGATION_LINKS = [
 // Manually provide an array of post links (this could be in your index.jsx)
 export const LINKEDIN_POSTS = [
 
+{
+  link:"https://www.linkedin.com/posts/cesarleoni29_linkedinrewind-2024wrapped-aiengineering-activity-7279932610749906944-GnIR",
+  image:linkedin5,
+  text:"My journey this year wasn't about collecting badges, but about connecting dots: from organizing charity runs to writing code, from acting to running a marathon.",
+  date:"December 2024"
+},
+
 {link:"https://www.linkedin.com/posts/cesarleoni29_this-december-marks-the-end-of-my-journey-activity-7277296776129183744-5RyZ",  
  image:linkedin4,
  text:"This December marks the end of my journey with Liga Studenților Electroniști (LSE) as Sports Department Coordinator.",
@@ -64,6 +72,7 @@ export const LINKEDIN_POSTS = [
   text:"Speakers like Emi Gal, Rahaf Harfoush, Ionut Stanimir, Alexandra Olaru, Cosmin Georgescu andy many more took the stage at the first event of this kind and magnitude in Craiova.",
   date:"March 2024"
 }
+
 ];
 
 const birthDate = new Date('2002-10-29'); // Replace with your actual birthdate (YYYY-MM-DD)
