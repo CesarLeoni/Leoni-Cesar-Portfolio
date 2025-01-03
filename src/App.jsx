@@ -40,7 +40,7 @@ const App = () => {
         <Education />
         <Contact />
         <LinkedInPosts />
-        <Pending />
+        {/* <Pending /> */}
         <Credits />
       </div>
     </main>
