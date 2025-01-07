@@ -129,7 +129,7 @@ export const PROJECTS = [
     title: "Faceshields for Heathcare",
     description:
       "During the Covid-19 pandemic I helped hundreds of healthcare workers with faceshields. Upgraded a 3d model for faster printing and built them by hand. Funding supported by my robotics team and sponsors were acquired in that occasion.",
-    techStack: ["3D Design", "3D Printing","Volunteering","Communication","Organisation","Fundraising"],
+    techStack: ["3D Design", "3D Printing","Volunteering","Communication","Fundraising"],
     imgSrc: project3,
     link: "https://www.youtube.com/watch?v=a-4ngBp47tc",
     skills: "Skills",
@@ -139,7 +139,7 @@ export const PROJECTS = [
     id: 6,
     title: "Personal Portfolio Website",
     description:
-      "Personal Portfolio to be continuously updated.",
+      "Personal Portfolio to be continuously updated. Chose to do this project for the Internet Programming Technologies Course, as I saw it's utility in my job searching process.",
     techStack: ["React", "Tailwind","GSAP"],
     imgSrc: project6,
     link: "https://github.com/CesarLeoni/Leoni-Cesar-Portfolio",
@@ -150,7 +150,7 @@ export const PROJECTS = [
     id: 2,
     title: "Median Filter",
     description:
-      "Image Median Filter for salt and pepper noise reduction.",
+      "Image Median Filter for salt and pepper noise reduction. Had this homework for the programming course and the curiosity made me dive deeper into image processing.",
     techStack: ["C++", "Image Processing"],
     imgSrc: project2,
     link: "https://github.com/CesarLeoni/Median_filter",
