@@ -1,9 +1,9 @@
-import { useState,lazy,Suspense } from "react";
+import { useState, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 // import Projects from "./components/Projects";
 import Pending from "./components/Pending";
-import LinkedInPosts from "./components/LinkedInPosts";
+// import LinkedInPosts from "./components/LinkedInPosts";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
@@ -13,6 +13,7 @@ import SnowEffect from "./components/SnowEffect";
 import SantaSleigh from "./components/SantaSleigh";
 
 const Projects = lazy(() => import("./components/Projects"));
+const LinkedInPosts = lazy(() => import("./components/LinkedInPosts"));
 
 const App = () => {
   const [showSnowflakes, setShowSnowflakes] = useState(true); // Initially show snowflakes
@@ -48,7 +49,10 @@ const App = () => {
         <Experience />
         <Education />
         <Contact />
-        <LinkedInPosts />
+        <Suspense fallback={<div>Loading...</div>}>
+          <LinkedInPosts />
+        </Suspense>
+
         {/* <Pending /> */}
         <Credits />
       </div>
