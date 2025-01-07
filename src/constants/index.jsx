@@ -3,7 +3,7 @@ import project2 from "/assets/project2.webp";
 import project3 from "/assets/project3.webp";
 import project4 from "/assets/project4.webp";
 import project5 from "/assets/project5.webp";
-import project6 from "/assets/project6.webp";
+import project6 from "/assets/old_project6.webp";
 import personImage from "/assets/testimonial.webp";
 
 import linkedin5 from "/assets/linkedin5.webp";
@@ -104,10 +104,53 @@ export const PROJECTS = [
     skills: "Skills",
   },
   {
+    id: 5,
+    title: "Breast Cancer Detection",
+    description:
+      "Enhanced images from a mammography dataset in order to better detect malign tumors. Used techniques like: piecewise linear contrast, binarization and closing.",
+    techStack: ["Image Processing","Python","Documentation","Research"],
+    imgSrc: project5,
+    link: "https://github.com/CesarLeoni/Medical_Imaging_Laboratory/tree/master/Project",
+    skills: "Tech Skills",
+  },
+  {
+    id: 4,
+    title: "Signal Generator",
+    description:
+      "Sinusoidal, rectangular and triangular signal generator with variable output voltage and frequency. Developed for SMD technology, personalised printed circuit board with manually soldered parts.",
+    techStack: ["Electronics","Orcad","PCB Layout","Soldering","Documentation"],
+    imgSrc: project4,
+    link: "/P1 Leoni Cesar Emanuele.pdf",
+    skills: "Tech Skills",
+  },
+  
+  {
+    id: 3,
+    title: "Faceshields for Heathcare",
+    description:
+      "During the Covid-19 pandemic I helped hundreds of healthcare workers with faceshields. Upgraded a 3d model for faster printing and built them by hand. Funding supported by my robotics team and sponsors were acquired in that occasion.",
+    techStack: ["3D Design", "3D Printing","Volunteering","Communication","Organisation","Fundraising"],
+    imgSrc: project3,
+    link: "https://www.youtube.com/watch?v=a-4ngBp47tc",
+    skills: "Skills",
+  },
+ 
+  {
+    id: 6,
+    title: "Personal Portfolio Website",
+    description:
+      "Personal Portfolio to be continuously updated.",
+    techStack: ["React", "Tailwind","GSAP"],
+    imgSrc: project6,
+    link: "https://github.com/CesarLeoni/Leoni-Cesar-Portfolio",
+    skills: "Tech Skills",
+  },
+
+  {
     id: 2,
     title: "Median Filter",
     description:
-      "Image Median Filter for salt and pepper noise reduction",
+      "Image Median Filter for salt and pepper noise reduction.",
     techStack: ["C++", "Image Processing"],
     imgSrc: project2,
     link: "https://github.com/CesarLeoni/Median_filter",
