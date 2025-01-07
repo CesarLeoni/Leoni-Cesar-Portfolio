@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState,lazy,Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
+// import Projects from "./components/Projects";
 import Pending from "./components/Pending";
 import LinkedInPosts from "./components/LinkedInPosts";
 import Skills from "./components/Skills";
@@ -11,6 +11,8 @@ import Contact from "./components/Contact";
 import Credits from "./components/Credits";
 import SnowEffect from "./components/SnowEffect";
 import SantaSleigh from "./components/SantaSleigh";
+
+const Projects = lazy(() => import("./components/Projects"));
 
 const App = () => {
   const [showSnowflakes, setShowSnowflakes] = useState(true); // Initially show snowflakes
@@ -27,14 +29,21 @@ const App = () => {
        bg-cover bg-center"
       ></div>
       <div className="relative z-10">
-        <Navbar toggleSnowflakes={toggleSnowflakes} showSnowflakes={showSnowflakes} />
-        
+        <Navbar
+          toggleSnowflakes={toggleSnowflakes}
+          showSnowflakes={showSnowflakes}
+        />
+
         {/* Conditionally render the SnowEffect based on the state */}
         {showSnowflakes && <SnowEffect />}
-        
+
         {/* <SantaSleigh /> */}
+
         <Hero />
-        <Projects />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Projects />
+        </Suspense>
+
         <Skills />
         <Experience />
         <Education />
