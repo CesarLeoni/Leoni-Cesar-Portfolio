@@ -13,16 +13,25 @@ const Education = () => {
           {EDUCATION.map((edu) => (
             <div
               key={edu.id}
-              className="rounded-xl border border-purple-300/20 p-6"
+              className="rounded-xl border border-purple-300/20 p-6 transition-transform duration-300 ease-in-out transform group hover:scale-105 hover:shadow-lg"
             >
-              <a href={edu.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={edu.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+              >
                 <div>
-                <h3 className="mb-2 text-lg lg:text-2xl">{edu.degree}</h3>
-                <h4 className="text-lg font-medium lg:text-xl">
-                  {edu.institution}
-                </h4>
-                <p className="text-sm lg:text-base">{edu.duration}</p>
-                <p className="mt-4">{edu.description}</p>
+                  <h3 className="mb-2 text-lg lg:text-2xl group-hover:text-purple-400">
+                    {edu.degree}
+                  </h3>
+                  <h4 className="text-lg font-medium lg:text-xl group-hover:text-purple-400">
+                    {edu.institution}
+                  </h4>
+                  <p className="text-sm lg:text-base">{edu.duration}</p>
+                  <p className="mt-4 group-hover:text-gray-200">
+                    {edu.description}
+                  </p>
                 </div>
               </a>
             </div>
