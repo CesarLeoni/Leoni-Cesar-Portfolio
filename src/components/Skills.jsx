@@ -13,7 +13,7 @@ const Skills = () =>{
                 lg:grid-cols-5">
                     {SKILLS.map((skill,index) => (
                         <div key={index} className="flex flex-col items-center text-center">
-                            <div className="mb-4">
+                            <div className="mb-4 text-3xl">
                                 {skill.icon}
                             </div>
                             <h3 className="mb-2 text-lg font-medium lg:text-xl">

@@ -1,14 +1,45 @@
-import { useState, useEffect, useRef } from 'react';
-import { RiMenu3Line, RiCloseLine } from '@remixicon/react';
-import { gsap } from 'gsap';
-import { NAVIGATION_LINKS } from '../constants';
+import { useState, useEffect, useRef } from "react";
+import { RiMenu3Line, RiCloseLine } from "@remixicon/react";
+import { gsap } from "gsap";
+import { NAVIGATION_LINKS } from "../constants";
 
 const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [winter, setWinter] = useState(false); // Add winter state
   const navRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const snowButtonRef = useRef(null);
   const magicTextRef = useRef(null);
+
+  const isWinter = (month, hemisphere) => {
+    if (hemisphere === 'northern') {
+      return month === 12 || month === 1 || month === 2; // Dec, Jan, Feb
+    } else if (hemisphere === 'southern') {
+      return month === 6 || month === 7 || month === 8; // Jun, Jul, Aug
+    }
+    return false;
+  }
+
+  const getHemisphere = async () => {
+    try {
+      // Replace the token with the one you provided
+      const response = await fetch('https://ipinfo.io/json?token=1584b09267e268'); 
+      const data = await response.json();
+      const latitude = parseFloat(data.loc.split(',')[0]);
+      const hemisphere = latitude >= 0 ? 'northern' : 'southern';
+  
+      const currentMonth = new Date().getMonth() + 1; // getMonth() returns 0-based month
+      const isItWinter = isWinter(currentMonth, hemisphere);
+      setWinter(isItWinter);
+    } catch (error) {
+      console.error('Error fetching IP information:', error);
+    }
+  };
+  
+
+  useEffect(() => {
+    getHemisphere(); // Call the function to determine winter
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -24,7 +55,7 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
     setIsMobileMenuOpen(false);
@@ -34,27 +65,27 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
   useEffect(() => {
     if (isMobileMenuOpen) {
       gsap.fromTo(
-        '.mobile-nav-link',
+        ".mobile-nav-link",
         { opacity: 0, x: -50 },
         {
           opacity: 1,
           x: 0,
           duration: 0.5,
           stagger: 0.1,
-          ease: 'power2.out',
+          ease: "power2.out",
         }
       );
-      
+
       // Animate "Christmas Magic" text and Snowflakes button from left with a delay
       gsap.fromTo(
         magicTextRef.current,
-        { opacity: 0, x: -50 },  // Start from left
+        { opacity: 0, x: -50 }, // Start from left
         {
           opacity: 1,
-          x: 0,  // Final position
+          x: 0, // Final position
           duration: 0.6,
-          delay: 0.6,  // Delay for synchronization
-          ease: 'power2.out',
+          delay: 0.6, // Delay for synchronization
+          ease: "power2.out",
         }
       );
 
@@ -65,20 +96,20 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
           opacity: 1,
           x: 0,
           duration: 0.6,
-          delay: 0.6,  // Delay to sync with the text
-          ease: 'power2.out',
+          delay: 0.6, // Delay to sync with the text
+          ease: "power2.out",
         }
       );
     } else {
-      gsap.to('.mobile-nav-link', {
+      gsap.to(".mobile-nav-link", {
         opacity: 1,
         x: -50,
         duration: 1,
         stagger: 0.1,
-        ease: 'power2.out',
+        ease: "power2.out",
         onComplete: () => {
           const menu = mobileMenuRef.current;
-          if (menu) menu.style.display = 'none';
+          if (menu) menu.style.display = "none";
         },
       });
 
@@ -86,14 +117,14 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
         opacity: 0,
         x: -50,
         duration: 1,
-        ease: 'power2.out',
+        ease: "power2.out",
       });
 
       gsap.to(snowButtonRef.current, {
         opacity: 0,
         x: -50,
         duration: 1,
-        ease: 'power2.out',
+        ease: "power2.out",
       });
     }
   }, [isMobileMenuOpen]);
@@ -108,7 +139,9 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
         <div className="flex w-full items-center justify-between gap-12">
           <div>
             <a href="/" className="nav-link nav-name">
-              <span className="uppercase text-lg hover:text-stone-300">Leoni Cesar</span>
+              <span className="uppercase text-lg hover:text-stone-300">
+                Leoni Cesar
+              </span>
             </a>
           </div>
           <div>
@@ -141,7 +174,7 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
             <button
               className="focus:outline-none lg:hidden"
               onClick={toggleMobileMenu}
-              aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+              aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
             >
               {isMobileMenuOpen ? (
                 <RiCloseLine className="m-2 h-8 w-8" />
@@ -168,29 +201,32 @@ const Navbar = ({ toggleSnowflakes, showSnowflakes }) => {
               ))}
             </ul>
 
-            {/* "Christmas Magic" Text and Snowflakes Toggle Button */}
-            <div className="mt-6 mb-3 ml-4 flex items-center gap-4">
-              {/* Christmas Magic Text */}
-              <span
-                ref={magicTextRef}
-                className="text-lg font-semibold text-white"
-              >
-                Christmas Magic
-              </span>
-
-              {/* Snowflakes Toggle Button */}
-              <button
-                ref={snowButtonRef}
-                className={`relative w-16 h-8 rounded-full ${showSnowflakes ? 'bg-purple-700' : 'bg-purple-900'}`}
-                onClick={toggleSnowflakes}
-              >
+            {winter && (
+              <div className="mt-6 mb-3 ml-4 flex items-center gap-4">
+                {/* Christmas Magic Text */}
                 <span
-                  className={`absolute top-0.5 left-0.5 w-7 h-7 bg-white rounded-full transition-all ${
-                    showSnowflakes ? 'translate-x-8' : 'translate-x-0'
+                  ref={magicTextRef}
+                  className="text-lg font-semibold text-white"
+                >
+                  Snow Magic
+                </span>
+
+                {/* Snowflakes Toggle Button */}
+                <button
+                  ref={snowButtonRef}
+                  className={`relative w-16 h-8 rounded-full ${
+                    showSnowflakes ? "bg-purple-700" : "bg-purple-900"
                   }`}
-                ></span>
-              </button>
-            </div>
+                  onClick={toggleSnowflakes}
+                >
+                  <span
+                    className={`absolute top-0.5 left-0.5 w-7 h-7 bg-white rounded-full transition-all ${
+                      showSnowflakes ? "translate-x-8" : "translate-x-0"
+                    }`}
+                  ></span>
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>

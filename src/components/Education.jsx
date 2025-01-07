@@ -9,7 +9,7 @@ const Education = () => {
         <h2 className="mb-8 text-center text-3xl font-medium lg:text-4xl">
           Education
         </h2>
-        <div className="flex flex-col items-center md:w-3/4 lg:mx-auto space-y-8">
+        <div className="flex flex-col items-center lg:w-3/4 lg:mx-auto space-y-8">
   {EDUCATION.map((edu) => (
     <div
       key={edu.id}

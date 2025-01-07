@@ -10,7 +10,6 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Credits from "./components/Credits";
 import SnowEffect from "./components/SnowEffect";
-// import SantaSleigh from "./components/SantaSleigh";
 
 const Projects = lazy(() => import("./components/Projects"));
 const LinkedInPosts = lazy(() => import("./components/LinkedInPosts"));
@@ -37,8 +36,6 @@ const App = () => {
 
         {/* Conditionally render the SnowEffect based on the state */}
         {showSnowflakes && <SnowEffect />}
-
-        {/* <SantaSleigh /> */}
 
         <Hero />
         <Suspense fallback={<div>Loading...</div>}>
