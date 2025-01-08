@@ -88,7 +88,7 @@ if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
 
 export const PROFILE = {
   name: "Leoni Cesar",
-  role: "AI Developer",
+  role: "AI Software Engineer",
   subheading: `Striving for growth and innovation over the past ${age} years, I’m driven by curiosity, eager to tackle challenges in cutting-edge technology with meaningful impact.`,
 };
 
