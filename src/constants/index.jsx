@@ -132,6 +132,8 @@ export const PROJECTS = [
     techStack: ["3D Design", "3D Printing","Volunteering","Communication","Fundraising"],
     imgSrc: project3,
     link: "https://www.youtube.com/watch?v=a-4ngBp47tc",
+    // link: "https://www.gds.ro/Educatie/2020-04-01/elevi-din-craiova-fac-viziere-pentru-cadrele-medicale/"
+    // link: "https://www.cancan.ro/ei-sunt-elevii-voluntari-care-ii-ajuta-pe-medici-in-vremuri-tulburi-putem-20173702"
     skills: "Skills",
   },
  
