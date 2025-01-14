@@ -11,12 +11,14 @@ const Contact = () => {
         <p className="mb-4 text-xl lg:text-2xl">
           Feel free to reach out via email: <br/>
           <a
-            href="mailto:leoni.cesar.emanuele@gmail.com"
-            className="inline-flex items-center space-x-2 border-b"
-          >
-            <RiArrowRightUpLine className="text-lg" />
-            <span>leoni.cesar.emanuele@gmail.com</span>
-          </a>
+  href="mailto:leoni.cesar.emanuele@gmail.com"
+  className="inline-flex items-center space-x-2 hover:scale-105 transition-all duration-300"
+>
+  <RiArrowRightUpLine 
+    className="text-lg text-gradient text-pink-200"/>
+  <span className="border-b bg-gradient-to-b from-purple-400 to-pink-400 bg-clip-text text-transparent">leoni.cesar.emanuele@gmail.com</span>
+</a>
+
         </p>
         <p className="mb-4 text-xl lg:text-2xl">
         or visit my LinkedIn and Github
