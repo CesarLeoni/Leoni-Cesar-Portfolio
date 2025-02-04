@@ -1,12 +1,13 @@
-// filepath: /tailwind.config.js
+// tailwind.config.js (v3.x)
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./index.html", // Adjust these paths according to your project structure
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {},
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
+  plugins: [
+    require("tailwind-scrollbar-hide"), // Your plugins
+  ],
+};
