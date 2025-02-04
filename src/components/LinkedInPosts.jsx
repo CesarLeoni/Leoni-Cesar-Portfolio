@@ -15,7 +15,7 @@ const LinkedInPosts = () => {
 
         {/* Container for the scrollable posts */}
         <div className="flex justify-center">
-          <div className="overflow-x-auto scrollbar-hide">
+          <div className="overflow-x-auto lg:scrollbar-visible pb-4">
             <div className="flex space-x-4 items-stretch">
               {LINKEDIN_POSTS.map((post, index) => (
                 <a
@@ -23,7 +23,7 @@ const LinkedInPosts = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   key={index}
-                  className="p-4 border rounded shadow w-80 flex-shrink-0 hover:shadow-xl hover:border-purple-600 hover:text-purple-200 transition-all duration-300 ease-in-out flex flex-col"
+                  className="p-4 border rounded shadow w-80 flex-shrink-0 hover:shadow-xl hover:border-purple-600 hover:text-purple-200 transition-all duration-300 ease-in-out flex flex-col mb-6"
                 >
                   {/* Post Image */}
                   <div className="mb-3 h-48 flex items-center justify-center">
