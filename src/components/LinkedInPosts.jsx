@@ -15,7 +15,7 @@ const LinkedInPosts = () => {
 
         {/* Container for the scrollable posts */}
         <div className="flex justify-center">
-          <div className="overflow-x-auto lg:scrollbar-visible pb-4">
+          <div className="overflow-x-auto lg:scrollbar-visible pb-2">
             <div className="flex space-x-4 items-stretch">
               {LINKEDIN_POSTS.map((post, index) => (
                 <a

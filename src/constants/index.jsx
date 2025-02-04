@@ -6,6 +6,7 @@ import project5 from "/assets/project5.webp";
 import project6 from "/assets/site_preview.webp";
 import personImage from "/assets/testimonial.webp";
 
+import linkedin6 from "/assets/site_preview.webp";
 import linkedin5 from "/assets/linkedin5.webp";
 import linkedin4 from "/assets/linkedin4.webp";
 import linkedin3 from "/assets/linkedin3.webp";
@@ -38,6 +39,13 @@ export const NAVIGATION_LINKS = [
 
 // Manually provide an array of post links (this could be in your index.jsx)
 export const LINKEDIN_POSTS = [
+
+  {
+    link:"https://www.linkedin.com/posts/cesarleoni29_leoni-cesar-online-portfolio-activity-7282659546043441153--iAG",
+    image:linkedin6,
+    text:"2025 kicks off in style! 🤩 I’m thrilled to announce the launch of my 𝐟𝐢𝐫𝐬𝐭 𝐨𝐧𝐥𝐢𝐧𝐞 𝐩𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨, a project close to my heart that I've been eager to bring to life for quite some time.",
+    date:"January 2025"
+  },
 
 {
   link:"https://www.linkedin.com/posts/cesarleoni29_linkedinrewind-2024wrapped-aiengineering-activity-7279932610749906944-GnIR",
