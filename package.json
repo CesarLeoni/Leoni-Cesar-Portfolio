@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.6.0",
+    "genezio": "^3.1.1",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
