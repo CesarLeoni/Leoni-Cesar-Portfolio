@@ -24,7 +24,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Leoni_Cesar_CV.pdf"
-                className="hero-btn mb-6 flex gap-1 rounded-full border border-2 border-pink-200/80 px-3 py-2 tracking-tighter"
+                className="hero-btn mb-6 flex gap-1 rounded-full border-2 border-pink-200/80 px-3 py-2 tracking-tighter"
             >
                 <span>Download Resume</span>
                 <RiArrowRightUpLine />

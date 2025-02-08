@@ -32,7 +32,7 @@ export const NAVIGATION_LINKS = [
   { label: "Skills", href: "#skills" },
   { label: "Work Experience", href: "#work" },
   { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "#panel" },
   { label: "LinkedIn Posts", href: "#linkedin" }, // New section
 ];
 
@@ -98,6 +98,7 @@ export const PROFILE = {
   name: "Leoni Cesar",
   role: "AI Software Engineer",
   subheading: `Striving for growth and innovation over the past ${age} years, I’m driven by curiosity, eager to tackle challenges in cutting-edge technology with meaningful impact.`,
+  quotes:["Ad augusta per angusta","Ad aspera per astra","Ad meliora per aspera","Ad astra per aspera"],
 };
 
 export const PROJECTS = [

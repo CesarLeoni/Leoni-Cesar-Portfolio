@@ -182,3 +182,20 @@ html, body {
   pointer-events: none;
   z-index: 9999;
 }
+
+.front {
+  backface-visibility: hidden;
+}
+
+.back {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}

@@ -10,6 +10,7 @@ import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Credits from "./components/Credits";
 import SnowEffect from "./components/SnowEffect";
+import RotatingPanel from "./components/RotatingPanel";
 
 const Projects = lazy(() => import("./components/Projects"));
 const LinkedInPosts = lazy(() => import("./components/LinkedInPosts"));
@@ -45,10 +46,13 @@ const App = () => {
         <Skills />
         <Experience />
         <Education />
-        <Contact />
+        {/* <Contact /> */}
+        <RotatingPanel />
         <Suspense fallback={<div>Loading...</div>}>
           <LinkedInPosts />
         </Suspense>
+
+        
 
         {/* <Pending /> */}
         <Credits />
