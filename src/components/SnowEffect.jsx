@@ -6,8 +6,10 @@ const SnowEffect = () => {
 
     useEffect(() => {
         const snowContainer = snowContainerRef.current;
+        if (!snowContainer) return; // ✅ Prevents running on undefined ref
 
         const createSnowflake = () => {
+            if (!snowContainer) return; // ✅ Ensures the container is still mounted
             const snowflake = document.createElement('div');
             snowflake.classList.add('snowflake');
 

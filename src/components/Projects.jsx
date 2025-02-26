@@ -1,19 +1,75 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { PROJECTS } from "../constants";
+import { gsap } from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   const projectsRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.set(".project-card", { opacity: 0, y: 50 }); // ✅ Ensures elements are hidden before animation
+      gsap.set(".project-title", { opacity: 0, y: 50 }); // Hide project title initially
+
+ // Animate project titles when the section enters the viewport
+ gsap.fromTo(
+  ".project-title",
+  { opacity: 0, y: 50 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power1.out",
+    scrollTrigger: {
+      trigger: ".project-title", // Trigger is the title itself
+      start: "top 75%", // Animate when the title enters the viewport
+      end: "top 10%", // Animate when the title leaves the viewport
+      toggleActions: "play none reverse none",
+      invalidateOnRefresh: true, // Recalculate trigger positions on viewport changes
+    },
+  }
+);
+
+      // Select all project cards
+      gsap.utils.toArray(".project-card").forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 150 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power1.out",
+            scrollTrigger: {
+              trigger: card, // Now each card has its own trigger
+              start: "top 75%", // Animate when each card enters viewport
+              end: "top 10%", // Animate when each card leaves viewport
+              toggleActions: "play none reverse none",
+              //scrub: true,
+  invalidateOnRefresh: true, // Recalculate trigger positions when viewport changes
+            },
+          }
+        );
+      });
+    }, projectsRef);
+
+      return () => ctx.revert();
+    })
+
+
   return (
     <section className="pt-8" id="projects" ref={projectsRef}>
       <div className="pt-2">
-        <h2 className="mb-8 text-center text-3xl font-medium lg:text-4xl">
+        <h2 className="project-title mb-8 text-center text-3xl font-medium lg:text-4xl">
           Projects
         </h2>
         <div className="flex flex-wrap justify-center">
           {PROJECTS.map((project) => (
             <div
               key={project.id}
-              className="flex w-full flex-col p-4 md:w-1/2 lg:w-1/3"
+              className="project-card flex w-full flex-col p-4 md:w-1/2 lg:w-1/3"
             >
               <a
                 href={project.link}
