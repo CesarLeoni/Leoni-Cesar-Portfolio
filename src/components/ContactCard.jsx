@@ -12,7 +12,7 @@ const ContactCard = () => {
 
                     <a
                         href="mailto:leoni.cesar.emanuele@gmail.com"
-                        className="inline-flex items-center space-x-2 hover:scale-105 hover:text-purple-600  transition-all duration-300"
+                        className="inline-flex items-center space-x-2 hover:scale-105 hover:text-purple-300 transition-all duration-300"
                     >
 
                         leoni.cesar.emanuele@gmail.com

@@ -23,7 +23,7 @@ const LinkedInPosts = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   key={index}
-                  className="p-4 border rounded shadow w-80 flex-shrink-0 hover:shadow-xl hover:border-purple-600 hover:text-purple-200 transition-all duration-300 ease-in-out flex flex-col mb-6"
+                  className="p-4 border-2 rounded w-80 flex-shrink-0 hover:shadow-[inset_0_0_30px_rgba(128,0,128,0.7)] hover:border-purple-600 hover:text-purple-200 transition-all duration-500 ease-in-out flex flex-col mb-6"
                 >
                   {/* Post Image */}
                   <div className="mb-3 h-48 flex items-center justify-center">

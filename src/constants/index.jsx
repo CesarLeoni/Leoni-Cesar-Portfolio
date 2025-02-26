@@ -43,7 +43,7 @@ export const LINKEDIN_POSTS = [
   {
     link:"https://www.linkedin.com/posts/cesarleoni29_leoni-cesar-online-portfolio-activity-7282659546043441153--iAG",
     image:linkedin6,
-    text:"2025 kicks off in style! 🤩 I’m thrilled to announce the launch of my 𝐟𝐢𝐫𝐬𝐭 𝐨𝐧𝐥𝐢𝐧𝐞 𝐩𝐨𝐫𝐭𝐟𝐨𝐥𝐢𝐨, a project close to my heart that I've been eager to bring to life for quite some time.",
+    text:"2025 kicks off in style! 🤩 I'm thrilled to announce the launch of my first online portfolio, a project close to my heart that I've been eager to bring to life for quite some time.",
     date:"January 2025"
   },
 
@@ -96,9 +96,9 @@ if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
 
 export const PROFILE = {
   name: "Leoni Cesar",
-  role: "AI Software Engineer",
+  role: "AI Passionate Student",
   subheading: `Striving for growth and innovation over the past ${age} years, I’m driven by curiosity, eager to tackle challenges in cutting-edge technology with meaningful impact.`,
-  quotes:["Ad augusta per angusta","Ad aspera per astra","Ad meliora per aspera","Ad astra per aspera"],
+  quotes:["Ad augusta per angusta","Ad aspera per astra","Ex ungue leonem","Carpe diem"],
 };
 
 export const PROJECTS = [
