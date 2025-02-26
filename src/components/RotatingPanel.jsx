@@ -22,17 +22,31 @@ export default function RotatingPanel() {
     // First clear the text, then write it
     gsap.to(quoteRef.current, {
       duration: 1.5,
-      text: " ",
+      text: "",
       ease: "power2.inOut",
       onComplete: () => {
         gsap.to(quoteRef.current, {
-          duration: 3,
+          duration: 2.5,
           text: text,
           ease: "power2.inOut",
         });
       },
     });
   };
+
+  // useEffect(() => {
+  //   // Writing effect 
+    
+  //     const currentQuote = PROFILE.quotes[currentQuoteIndex];
+  //     animateText(currentQuote);
+  //     cycleQuotes();
+  // // change the quote every 5 seconds
+
+  //   // Cleanup interval on unmount
+  //   return () => clearInterval(quoteInterval);
+
+  // }, [currentQuoteIndex]); // This effect runs only once when the component is mounted
+
 
     useEffect(() => {
       // Writing effect 
@@ -89,7 +103,7 @@ export default function RotatingPanel() {
                 minHeight: "60px", // Ensure the text area has a fixed height
                 // lineHeight: "1.5",
               }}>
-              
+                {/* {PROFILE.quotes[currentQuoteIndex]} */}
               </p>
             </div>
           </div>

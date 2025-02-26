@@ -1,10 +1,67 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { PROFILE } from "../constants";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import cesar from "/assets/cesar.webp";
+import gsap from "gsap";
 
 const Hero = () => {
+
     const heroRef = useRef(null);
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            const tl = gsap.timeline({
+                defaults: {ease: "power1.out", duration: 0.8},
+            });
+
+
+            tl.from(".hero-title", {
+                opacity: 0,
+                y: -50,
+                scale: 0.90,
+                duration: 0.8,
+                // stagger: 0.15,
+        })
+
+            .from(
+                ".hero-subheading",
+                {
+                    opacity: 0,
+                    y: -50,
+                    scale: 0.90,
+                    duration: 0.8,
+                },
+                "-=0.8"
+            )
+            .from(
+                ".hero-text",{
+                    opacity: 0,
+                    // y: 30,
+                    scale: 0.9,
+                    duration: 0.8,
+                },
+                "-=0.4"
+            )
+            .from(".hero-btn", {
+                opacity: 0,
+                scale: 0.9,
+                duration: 0.8,
+            }, "-=0.6")
+            .from(".hero-img", {
+                opacity: 0,
+                y:150,
+                scale: 0.95,
+                duration: 1,
+                ease: "elastic.out(0.35,0.25)",
+            }, "-=0.4");
+
+            }, heroRef)
+
+            return() => ctx.revert()
+        },[]);
+
+
+
     return (
         <section
             ref={heroRef}
