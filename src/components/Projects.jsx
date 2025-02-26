@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { PROJECTS } from "../constants";
 import { gsap } from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,24 +13,25 @@ const Projects = () => {
       gsap.set(".project-card", { opacity: 0, y: 50 }); // ✅ Ensures elements are hidden before animation
       gsap.set(".project-title", { opacity: 0, y: 50 }); // Hide project title initially
 
- // Animate project titles when the section enters the viewport
- gsap.fromTo(
-  ".project-title",
-  { opacity: 0, y: 50 },
-  {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    ease: "power1.out",
-    scrollTrigger: {
-      trigger: ".project-title", // Trigger is the title itself
-      start: "top 75%", // Animate when the title enters the viewport
-      end: "top 10%", // Animate when the title leaves the viewport
-      toggleActions: "play none reverse none",
-      invalidateOnRefresh: true, // Recalculate trigger positions on viewport changes
-    },
-  }
-);
+      // Animate project titles when the section enters the viewport
+      gsap.fromTo(
+        ".project-title",
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: ".project-title", // Trigger is the title itself
+            start: "top 75%", // Animate when the title enters the viewport
+            end: "top 30%", // Animate when the title leaves the viewport
+            toggleActions: "play none reverse none",
+            scrub:1,
+            invalidateOnRefresh: true, // Recalculate trigger positions on viewport changes
+          },
+        }
+      );
 
       // Select all project cards
       gsap.utils.toArray(".project-card").forEach((card, index) => {
@@ -41,22 +42,22 @@ const Projects = () => {
             opacity: 1,
             y: 0,
             duration: 1,
-            ease: "power1.out",
+            ease: "power2.out",
             scrollTrigger: {
               trigger: card, // Now each card has its own trigger
               start: "top 75%", // Animate when each card enters viewport
-              end: "top 10%", // Animate when each card leaves viewport
+              end: "top 30%", // Animate when each card leaves viewport
               toggleActions: "play none reverse none",
-              //scrub: true,
-  invalidateOnRefresh: true, // Recalculate trigger positions when viewport changes
+              scrub: 1,
+              invalidateOnRefresh: true, // Recalculate trigger positions when viewport changes
             },
           }
         );
       });
     }, projectsRef);
 
-      return () => ctx.revert();
-    })
+    return () => ctx.revert();
+  })
 
 
   return (
