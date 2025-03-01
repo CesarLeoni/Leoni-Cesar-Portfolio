@@ -6,6 +6,7 @@ import project5 from "/assets/project5.webp";
 import project6 from "/assets/site_preview.webp";
 import personImage from "/assets/testimonial.webp";
 
+import linkedin7 from "/assets/linkedin7.webp";
 import linkedin6 from "/assets/site_preview.webp";
 import linkedin5 from "/assets/linkedin5.webp";
 import linkedin4 from "/assets/linkedin4.webp";
@@ -39,7 +40,12 @@ export const NAVIGATION_LINKS = [
 
 // Manually provide an array of post links (this could be in your index.jsx)
 export const LINKEDIN_POSTS = [
-
+  {
+    link:"https://www.linkedin.com/posts/cesarleoni29_another-amazing-experience-at-stagii-pe-bune-activity-7301719238489088000-9tTh",
+    image:linkedin7,
+    text:"Another amazing experience at Stagii pe Bune, a job fair I've enjoyed attending for three years now - yet it never ceases to surprise me! 🚀",
+    date:"March 2025"
+  },
   {
     link:"https://www.linkedin.com/posts/cesarleoni29_leoni-cesar-online-portfolio-activity-7282659546043441153--iAG",
     image:linkedin6,
