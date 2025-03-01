@@ -83,7 +83,7 @@ export const LINKEDIN_POSTS = [
 
 ];
 
-const birthDate = new Date('2002-10-29'); // Replace with your actual birthdate (YYYY-MM-DD)
+const birthDate = new Date('2002-10-29');
 const today = new Date();
 
 let age = today.getFullYear() - birthDate.getFullYear();

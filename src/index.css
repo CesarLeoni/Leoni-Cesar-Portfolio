@@ -199,3 +199,31 @@ html, body {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* Striped Background with Smooth Scrolling */
+.bg-stripe-martisor {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.8) 0%,
+    rgba(255, 0, 0, 0.8) 1%,
+    rgba(255, 255, 255, 1) 1%,
+    rgba(255, 255, 255, 1) 2%
+  );
+  background-size: 400% 400%; /* Ensures continuous pattern */
+  background-position: 0 0;
+  color: white;
+}
+
+/* Striped Background with Smooth Scrolling */
+.bg-stripe-martisor-thick {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.8) 0%,
+    rgba(255, 0, 0, 0.8) 10%,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(255, 255, 255, 1) 20%
+  );
+  background-size: 100% 100%; /* Ensures continuous pattern */
+  background-position: 0 0;
+  color: white;
+}
