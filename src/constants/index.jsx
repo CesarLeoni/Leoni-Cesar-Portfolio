@@ -6,6 +6,7 @@ import project5 from "/assets/project5.webp";
 import project6 from "/assets/site_preview.webp";
 import personImage from "/assets/testimonial.webp";
 
+import linkedin8 from "/assets/linkedin8.webp";
 import linkedin7 from "/assets/linkedin7.webp";
 import linkedin6 from "/assets/site_preview.webp";
 import linkedin5 from "/assets/linkedin5.webp";
@@ -40,6 +41,12 @@ export const NAVIGATION_LINKS = [
 
 // Manually provide an array of post links (this could be in your index.jsx)
 export const LINKEDIN_POSTS = [
+  {
+    link:"https://www.linkedin.com/posts/cesarleoni29_this-weekend-i-embarked-on-an-incredible-activity-7304562102734655488-Pvlx",
+    image:linkedin8,
+    text:"Innovation Labs Romania 2025 and the qualification for their pre-seed mentorship started an incredible journey with my 'co-founders' Vlad Ciolacu and Andreas Bașchir!",
+    date:"March 2025"
+  },
   {
     link:"https://www.linkedin.com/posts/cesarleoni29_another-amazing-experience-at-stagii-pe-bune-activity-7301719238489088000-9tTh",
     image:linkedin7,
