@@ -4,6 +4,7 @@ import project3 from "/assets/project3.webp";
 import project4 from "/assets/project4.webp";
 import project5 from "/assets/project5.webp";
 import project6 from "/assets/site_preview.webp";
+import project7 from "/assets/project7.webp";
 import personImage from "/assets/testimonial.webp";
 
 import linkedin8 from "/assets/linkedin8.webp";
@@ -178,6 +179,16 @@ export const PROJECTS = [
     techStack: ["C++", "Image Processing"],
     imgSrc: project2,
     link: "https://github.com/CesarLeoni/Median_filter",
+    skills: "Tech Skills",
+  },
+  {
+    id: 7,
+    title: "TranscriptAI",
+    description:
+      "Transcription Web APP for audio files. Used Whisper API to transcribe the audio and a simple streamlit frontend.",
+    techStack: ["Python", "Streamlit", "OpenAI API","Generative AI"],
+    imgSrc: project7,
+    link: "https://transcriptai25.streamlit.app/",
     skills: "Tech Skills",
   },
 ];
