@@ -5,6 +5,7 @@ import project4 from "/assets/project4.webp";
 import project5 from "/assets/project5.webp";
 import project6 from "/assets/site_preview.webp";
 import project7 from "/assets/project7.webp";
+import project8 from "/assets/project8.webp";
 import personImage from "/assets/testimonial.webp";
 
 import linkedin8 from "/assets/linkedin8.webp";
@@ -190,6 +191,16 @@ export const PROJECTS = [
     imgSrc: project7,
     link: "https://transcriptai25.streamlit.app/",
     skills: "Tech Skills",
+  },
+  {
+    id: 8,
+    title: "AImunca.ro",
+    description:
+      "Workforce aquisition start-up for the blue-collar sector. With AI system that screens candidates by phone and ranks them based on their answers.",
+    techStack: ["Project Management","Marketing","Teamwork","Python", "Google STT","Twilio", "OpenAI API"],
+    imgSrc: project8,
+    link: "https://www.linkedin.com/company/aimunca-ro/about/",
+    skills: "Product and Tech Skills",
   },
 ];
 

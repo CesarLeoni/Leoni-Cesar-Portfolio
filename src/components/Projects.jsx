@@ -29,6 +29,7 @@ const Projects = () => {
             toggleActions: "play none reverse none",
             scrub:1,
             invalidateOnRefresh: true, // Recalculate trigger positions on viewport changes
+            //markers: true, // Show markers for debugging
           },
         }
       );
@@ -50,6 +51,7 @@ const Projects = () => {
               toggleActions: "play none reverse none",
               scrub: 1,
               invalidateOnRefresh: true, // Recalculate trigger positions when viewport changes
+              //markers: true, // Show markers for debugging
             },
           }
         );
