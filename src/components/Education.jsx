@@ -72,8 +72,7 @@ const Education = () => {
           {EDUCATION.map((edu) => (
             <div
               key={edu.id}
-              className="education-card group rounded-xl border border-purple-300/20 p-6 hover:transform hover:scale-110 hover:shadow-lg"
-            >
+className="education-card group rounded-xl border border-purple-300/20 p-6 transform hover:transition-transform hover:duration-300 hover:shadow-lg"            >
               <a
                 href={edu.link}
                 target="_blank"
