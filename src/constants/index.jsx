@@ -259,6 +259,14 @@ export const SKILLS = [
 
 export const EXPERIENCES = [
   {
+    yearRange: "May 2025 - Present",
+    role: "Community Manager",
+    company: "Leaders Foundation",
+    description:
+      "Organising educational programs for highschool students, providing help in communicating with the students, teachers, parents and the project manager.",
+    techStack: ["Volunteering", "Google Suite", "Communication","Collaboration"],
+  },
+  {
     yearRange: "Iul 2024 - Oct 2024",
     role: "Java Software Developer Intern",
     company: "Siveco Technology",
