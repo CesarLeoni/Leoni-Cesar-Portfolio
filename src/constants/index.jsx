@@ -6,7 +6,7 @@ import project5 from "/assets/project5.webp";
 import project6 from "/assets/site_preview.webp";
 import project7 from "/assets/project7.webp";
 import project8 from "/assets/project8.webp";
-import personImage from "/assets/testimonial.webp";
+
 
 import linkedin8 from "/assets/linkedin8.webp";
 import linkedin7 from "/assets/linkedin7.webp";
@@ -339,11 +339,3 @@ export const EDUCATION = [
       "Graduated Highschool with Mathematics Informatics Bilingual German. Average mark: 9.975. Baccalaureate marks: Maths - 9.65, Physics - 10, Romanian: 9.35",
   },
 ];
-
-export const TESTIMONIAL = {
-  name: "Sarah Doe",
-  title: "CEO, TechCorp",
-  quote:
-    "Working with David was a game-changer. His expertise in full-stack development helped us scale our product with ease. His attention to detail and passion for quality are unmatched.",
-  image: personImage,
-};
