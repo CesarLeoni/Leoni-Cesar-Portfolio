@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { PROFILE } from "../constants";
 import { RiArrowRightUpLine } from "@remixicon/react";
+import { GoDownload } from "react-icons/go";
+import { RiArrowDownLine } from "@remixicon/react";
 import cesar from "/assets/cesar.webp";
 import gsap from "gsap";
 
@@ -83,8 +85,9 @@ const Hero = () => {
                 download="Leoni_Cesar_CV.pdf"
                 className="hero-btn mb-6 flex gap-1 rounded-full border-2 border-pink-200/80 px-3 py-2 tracking-tighter"
             >
+                <RiArrowDownLine />
                 <span>Download Resume</span>
-                <RiArrowRightUpLine />
+                <RiArrowDownLine />
             </a>
             <img
                 src={cesar}
