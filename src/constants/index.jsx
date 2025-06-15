@@ -35,6 +35,7 @@ import {
   RiCodeSSlashLine,
   RiGitBranchLine,
 } from "@remixicon/react";
+import { SiLatex } from "react-icons/si";
 
 
 export const NAVIGATION_LINKS = [
@@ -219,6 +220,10 @@ export const SKILLS = [
     name: "3D Modelling",
     icon: <BiCube className="text-purple-500" />,
   },
+  {
+  name: "LaTeX",
+  icon: <SiLatex className="text-indigo-500" />,
+},
 ];
 
 export const EXPERIENCES = [
