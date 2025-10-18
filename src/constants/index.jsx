@@ -236,6 +236,14 @@ export const EXPERIENCES = [
     techStack: ["Volunteering", "Google Suite", "Communication","Collaboration"],
   },
   {
+    yearRange: "July 2025 - Sept 2025",
+    role: "Software Developer Intern",
+    company: "Softwire",
+    description:
+      "Built and enhanced web application features using Next.js with TypeScript, React and AWS Amplify, ensuring clean, scalable, and maintainable code.",
+    techStack: ["Typescript", "React", "AWS Amplify","Next.js", "Git","Material UI","Agile Methodologies"],
+  },
+  {
     yearRange: "Iul 2024 - Oct 2024",
     role: "Java Software Developer Intern",
     company: "Siveco Technology",
@@ -273,6 +281,15 @@ export const EXPERIENCES = [
 export const EDUCATION = [
   {
     id: 1,
+    degree: "Master's in Quantum Computing",
+    institution: "National University of Science and Technology POLITEHNICA Bucharest - ACS Faculty",
+    duration: "2025 - 2027",
+    link: "https://quantum.upb.ro/qschool.html",
+    description:
+      "Studying courses like: Basics of Linear Algebra for Quantum Computing, Quantum Information Theory, Quantum Communications and Cryptography, Quantum Algorithms, and Machine Learning.",
+  },
+  {
+    id: 2,
     degree: "Bachelor's in Applied Electronics",
     institution: "National University of Science and Technology POLITEHNICA Bucharest - ETTI Faculty",
     duration: "2021 - 2025",
@@ -281,7 +298,7 @@ export const EDUCATION = [
       "Studied courses like: Object Oriented Programming, Internet Porgramming Technologies and Neural Netwoks and Fuzzy Logic. Average mark: 9.45",
   },
   {
-    id: 2,
+    id: 3,
     degree: "Generative AI Certified Professional",
     institution: "Oracle Cloud Infrastructure",
     duration: "2024",
@@ -298,7 +315,7 @@ export const EDUCATION = [
     description: "Leaders Explore programme · Problem Solving · Personal efficiency · Taking initiative · Teamwork · Communication",
   },
   {
-    id: 3,
+    id: 5,
     degree: "Java Development",
     institution: "Digital Stack - Google",
     duration: "2023",
@@ -308,7 +325,7 @@ export const EDUCATION = [
       "Earned a certification in advanced React.js development, including hooks, context API, and performance optimization.",
   },
   {
-    id: 4,
+    id: 6,
     degree: "Baccalaureate",
     institution: "National College 'Frații Buzești' ",
     duration: "2017 - 2021",
