@@ -61,7 +61,7 @@ if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
 
 export const PROFILE = {
   name: "Leoni Cesar",
-  role: "AI Passionate Student",
+  role: "Passionate engineer",
   subheading: `Striving for growth and innovation over the past ${age} years, driven by curiosity and eager to tackle challenges in cutting-edge technology with meaningful impact.`,
   quotes:["Ad augusta per angusta","Ad aspera per astra","Ex ungue leonem","Carpe diem"],
 };
@@ -227,8 +227,16 @@ export const SKILLS = [
 ];
 
 export const EXPERIENCES = [
+    {
+    yearRange: "Jan 2026 - Present",
+    role: "Software Developer (with German)",
+    company: "Siemens Energy",
+    description:
+      "Working in an international team for developing a C# web application.",
+    techStack: ["C#", "Playwright", "German", "Agile", "Communication","Collaboration"],
+  },
   {
-    yearRange: "May 2025 - Present",
+    yearRange: "May 2025 - Dec 2025",
     role: "Community Manager",
     company: "Leaders Foundation",
     description:
@@ -299,6 +307,15 @@ export const EDUCATION = [
   },
   {
     id: 3,
+    degree: "Agentic AI",
+    institution: "Google",
+    duration: "2026",
+    link: "https://drive.google.com/file/d/1WkVdjNnXnSW1djOkseMNglo0EC0ra1hX/view?usp=drive_link",
+    description:
+      "Skills: Artificial Intelligence (AI) · Agentic AI (ADK) · Large Language Models (LLM) · Retrieval Augmented Generation (RAG)",
+  },
+  {
+    id: 4,
     degree: "Generative AI Certified Professional",
     institution: "Oracle Cloud Infrastructure",
     duration: "2024",
@@ -307,7 +324,7 @@ export const EDUCATION = [
       "Skills: Artificial Intelligence (AI) · Large Language Models (LLM) · Retrieval Augmented Generation (RAG) · Oracle Cloud Infrastructure · Generative AI · Natural Language Processing (NLP)",
   },
   {
-    id: 4,
+    id: 5,
     degree: "Leadership Certificate",
     institution: "LEADERS Foundation",
     duration: "2025",
@@ -315,7 +332,7 @@ export const EDUCATION = [
     description: "Leaders Explore programme · Problem Solving · Personal efficiency · Taking initiative · Teamwork · Communication",
   },
   {
-    id: 5,
+    id: 6,
     degree: "Java Development",
     institution: "Digital Stack - Google",
     duration: "2023",
@@ -325,7 +342,7 @@ export const EDUCATION = [
       "Earned a certification in advanced React.js development, including hooks, context API, and performance optimization.",
   },
   {
-    id: 6,
+    id: 7,
     degree: "Baccalaureate",
     institution: "National College 'Frații Buzești' ",
     duration: "2017 - 2021",
@@ -334,6 +351,8 @@ export const EDUCATION = [
       "Graduated Highschool with Mathematics Informatics Bilingual German. Average mark: 9.975. Baccalaureate marks: Maths - 9.65, Physics - 10, Romanian: 9.35",
   },
 ];
+// TODO no longer use this id....
+// TODO add the hugging face maybe?
 
 // Manually provide an array of post links (this could be in your index.jsx)
 export const LINKEDIN_POSTS = [
